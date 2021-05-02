@@ -1,0 +1,15 @@
+version: "3"
+services:
+    node-app:
+        build:
+            context: .
+            args:
+                NODE_ENV: development
+        ports: 
+            - "3000:3000"
+        volumes: 
+            - ./:/app
+            - /app/node_modules
+        env_file: 
+            - ./.env
+        command: npm run dev
