@@ -9,3 +9,15 @@ services:
             - /app/node_modules
         env_file: 
             - ./.env
+        depends_on: 
+            - mongo
+        
+    mongo:
+        image: mongo
+        env_file: 
+            - ./.env
+        volumes: 
+            - mongo-db:/data/db
+
+volumes: 
+    mongo-db:
