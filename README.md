@@ -1,6 +1,6 @@
 # Backend-Docker
 
-### Node, MongoDB and Redis best practises with Docker
+### Node, MongoDB and Nginx best practises with Docker
 
 ## Commands
 
