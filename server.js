@@ -21,7 +21,6 @@ app.use(cookieParser());
 
 app.get("/api/v1", (req, res) => {
   res.send("Backend up with Docker");
-  console.log("Running!");
 });
 
 app.use("/api/v1", authRoutes);
@@ -33,3 +32,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running at ${PORT}`);
 });
+
+module.exports = app;
