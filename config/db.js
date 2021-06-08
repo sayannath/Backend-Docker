@@ -6,7 +6,13 @@ const {
   MONGO_PORT,
 } = require("./config");
 
-const mongo_url = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`;
+var mongo_url;
+
+if (process.env.NODE_ENV === "development") {
+  mongo_url = process.env.MONGO_DEV;
+} else {
+  mongo_url = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`;
+}
 
 const connectWithRetry = () => {
   mongoose
