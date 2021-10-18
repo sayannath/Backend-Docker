@@ -9,7 +9,7 @@ require("./config/db");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 
-//Import Routes
+// Import Routes
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 const todoRoutes = require("./routes/todo");
